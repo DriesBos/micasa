@@ -7,6 +7,7 @@ const { data } = await storyblokApi.get('cdn/stories/config', {
 
 const headerMenu = ref(null);
 headerMenu.value = data.story.content.header_menu;
+console.log('HEADER', data.story.content);
 </script>
 
 <template>
@@ -17,12 +18,22 @@ headerMenu.value = data.story.content.header_menu;
       </NuxtLink>
     </div>
     <div class="header-Nav">
-      <nav v-if="headerMenu">
+      <!-- <nav v-if="headerMenu">
         <ul>
           <li v-for="blok in headerMenu" :key="blok._uid">
-            <NuxtLink :to="blok.link.cached_url">
-              {{ blok.link.story.name }}
+            <NuxtLink :to="blok.link.cached_url"
+              >{{ blok.link.story.name }}
             </NuxtLink>
+          </li>
+        </ul>
+      </nav> -->
+      <nav>
+        <ul>
+          <li>
+            <NuxtLink to="/blog"> Blog </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/about"> About </NuxtLink>
           </li>
         </ul>
       </nav>
