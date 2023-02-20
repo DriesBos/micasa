@@ -1,0 +1,94 @@
+// @font-face
+//   font-family: ''
+//   src: url('~assets/fonts/') format('')
+//   font-weight: normal
+//   font-style: normal
+
+// @font-face
+//   font-family: ''
+//   src: url('~assets/fonts/') format('')
+//   font-weight: normal
+//   font-style: italic
+
+// @font-face
+//   font-family: ''
+//   src: url('~assets/fonts/') format('')
+//   font-weight: bold
+//   font-style: normal
+
+// https://www.madebymike.com.au/writing/fluid-type-calc-examples/
+html
+  font-size: 16px
+
+@media screen and (min-width: 800px)
+  html
+    font-size: calc(16px + 6 * ((100vw - 800px) / 1200))
+
+@media screen and (min-width: 2000px)
+  html
+    font-size: 22px
+
+h1, h2, h3, p, a
+  word-wrap: break-word
+  overflow-wrap: break-word
+  word-break: normal
+  hyphens: auto
+
+.markdown p // No broken words in regular sized text paragraphs
+  word-wrap: normal
+  word-break: normal
+  overflow-wrap: normal
+  hyphens: none
+
+li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
+  font-family: Helvetica, Arial, sans-serif
+  line-height: 1.5
+  color: $color
+  font-style: normal
+  font-weight: normal
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.markdown
+  p
+    font-size: $type-size-p
+  h1
+    font-size: $type-size-h1
+  h2
+    font-size: $type-size-h2
+  h3
+    font-size: $type-size-h3
+  h4
+    font-size: $type-size-h4
+  h5
+    font-size: $type-size-h5
+  a
+    color: $color
+    text-decoration: underline
+  strong
+    font-weight: bold
+  em
+    font-style: italic
+  blockquote, blockquote p
+    font-size: $type-size-blockquote
+  p, h1, h2, h3, h4, h5, blockquote
+    margin-bottom: $lineheight
+  p
+    min-height: $lineheight
+
+.ellipsis // Limit title to one line
+  overflow: hidden
+  min-width: 0
+  text-overflow: ellipsis
+  h1, h2, h3, p, a
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+.lineClamp // Limit excerpt to X lines
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap

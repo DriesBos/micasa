@@ -8,7 +8,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.2.2"
+    "nuxt": "^3.2.2",
+    "sass": "^1.58.3",
+    "sass-loader": "^10.4.1"
   },
   "dependencies": {
     "@storyblok/nuxt": "^5.1.0"
