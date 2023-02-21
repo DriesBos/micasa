@@ -1,14 +1,14 @@
 <template>
-  <div>
-    <h2>{{ blok.headline }}</h2>
-    <div>
-      <ArticleCard
-        v-for="article in articles"
-        :key="article.uuid"
-        :article="article.content"
-        :slug="article.full_slug"
-      />
-    </div>
+  <h2>
+    {{ blok.headline }}
+  </h2>
+  <div class="articles">
+    <ArticleCard
+      v-for="article in articles"
+      :key="article.uuid"
+      :article="article.content"
+      :slug="article.full_slug"
+    />
   </div>
 </template>
 
@@ -23,5 +23,4 @@ const { data } = await storyblokApi.get('cdn/stories', {
   is_startpage: false,
 });
 articles.value = data.stories;
-// console.log('ALL ARTICLES', data.stories);
 </script>

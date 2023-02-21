@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink :to="'/' + slug" v-editable="article">
+  <NuxtLink :to="'/' + slug" v-editable="article" tag="div">
     <img :src="article.image.filename + '/m/600x0'" :alt="article.image.alt" />
     <div>
       <h3>

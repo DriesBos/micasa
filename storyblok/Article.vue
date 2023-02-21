@@ -1,6 +1,8 @@
 <template>
-  <div v-editable="blok">
-    <img :src="blok.image.filename + '/m/1600x0'" :alt="blok.image.alt" />
+  <div v-editable="blok" class="view-Page view-Article">
+    <div>
+      <img :src="blok.image.filename + '/m/1600x0'" :alt="blok.image.alt" />
+    </div>
     <div>
       <h1>{{ blok.title }}</h1>
       <div v-html="resolvedRichText" class="richText"></div>
