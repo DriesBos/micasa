@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Boilerplate
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction).
+Some [GSAP examples](https://stackblitz.com/@GreenSockLearning/collections/gsap-nuxtjs-starters).
 
 ## Setup
 
@@ -19,7 +20,7 @@ pnpm install
 
 ## Development Server
 
-Install MKCERT for HTTPS dev env (guide: https://github.com/FiloSottile/mkcert)
+Storyblok V2 requires HTTPS. Install [MKCERT](guide: https://github.com/FiloSottile/mkcert) for HTTPS in development environment
 
 Start the development server on https://localhost:3000
 
