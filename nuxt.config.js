@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       viewport: 'width=device-width, initial-scale=1',
       title: 'title',
@@ -25,6 +26,7 @@ export default defineNuxtConfig({
     '~/assets/styles/reset.css',
     '~/assets/styles/form-reset.css',
     '~/assets/styles/typography.sass',
+    '~/assets/styles/transitions.sass',
     '~/assets/styles/main.sass',
   ],
 
