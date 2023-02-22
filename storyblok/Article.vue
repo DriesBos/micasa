@@ -5,13 +5,11 @@
     </div>
     <div>
       <h1>{{ blok.title }}</h1>
-      <div v-html="resolvedRichText" class="richText"></div>
+      <Markdown :content="blok.content" />
     </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({ blok: Object });
-
-const resolvedRichText = computed(() => renderRichText(props.blok.content));
 </script>
