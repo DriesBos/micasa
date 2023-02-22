@@ -28,5 +28,15 @@ export default defineNuxtConfig({
     '~/assets/styles/main.sass',
   ],
 
-  modules: [['@storyblok/nuxt', { accessToken: 'xqxGf5K27JJeyyfVi3w3Agtt' }]],
+  modules: [
+    [
+      '@storyblok/nuxt',
+      {
+        accessToken:
+          process.env.NODE_ENV == 'production'
+            ? process.env.PUBLICKEY
+            : process.env.PREVIEWKEY,
+      },
+    ],
+  ],
 });
