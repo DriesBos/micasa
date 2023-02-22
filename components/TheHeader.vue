@@ -8,7 +8,11 @@
     <div class="header-Nav">
       <nav v-if="headerMenu">
         <ul>
-          <li v-for="blok in headerMenu" :key="blok._uid">
+          <li
+            v-for="blok in headerMenu"
+            class="cursorInteract"
+            :key="blok._uid"
+          >
             <NuxtLink :to="blok.link.cached_url"
               >{{ blok.link.story.name }}
             </NuxtLink>
