@@ -1,8 +1,9 @@
 <template>
-  <h2>
-    {{ blok.headline }}
-  </h2>
   <div class="articles">
+    <MultiSelector>
+      <Button>text</Button>
+      <Button>image</Button>
+    </MultiSelector>
     <ArticleCard
       v-for="article in articles"
       :key="article.uuid"
