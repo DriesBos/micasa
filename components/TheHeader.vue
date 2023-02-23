@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="header-Logo cursorInteract">
+    <div class="header-Logo displayFont cursorInteract">
       <NuxtLink to="/">
         <h1>MiCasa</h1>
       </NuxtLink>
