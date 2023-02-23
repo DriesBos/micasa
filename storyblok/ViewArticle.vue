@@ -5,6 +5,8 @@
     </div>
     <div>
       <h1>{{ blok.title }}</h1>
+      <p>{{ blok.location }}</p>
+      <p>{{ blok.date }}</p>
       <Markdown :content="blok.content" />
     </div>
   </div>
