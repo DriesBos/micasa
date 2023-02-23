@@ -1,20 +1,27 @@
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: normal
 
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: normal
-//   font-style: italic
+@font-face
+  font-family: 'Futura PT'
+  src: url('~assets/fonts/Futura-PT-Book.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
 
-// @font-face
-//   font-family: ''
-//   src: url('~assets/fonts/') format('')
-//   font-weight: bold
-//   font-style: normal
+@font-face
+  font-family: 'Futura PT'
+  src: url('~assets/fonts/Futura-PT-Medium.woff2') format('woff2')
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: 'Clearface'
+  src: url('~assets/fonts/ClearfaceStd-Heavy.woff2') format('woff2')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Clearface'
+  src: url('~assets/fonts/ClearfaceStd-HeavyItalic.woff2') format('woff2')
+  font-weight: bold
+  font-style: italic
 
 // https://www.madebymike.com.au/writing/fluid-type-calc-examples/
 html
@@ -41,13 +48,17 @@ h1, h2, h3, p, a
   hyphens: none
 
 li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
-  font-family: Helvetica, Arial, sans-serif
+  font-family: "Futura PT", Helvetica, Arial, sans-serif
   line-height: 1.5
   color: $color
   font-style: normal
   font-weight: normal
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+
+.displayFont
+  li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
+    font-family: "Clearface", Helvetica, Arial, sans-serif
 
 .markdown
   p
