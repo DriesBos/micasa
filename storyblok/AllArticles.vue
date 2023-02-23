@@ -43,7 +43,7 @@ function toggleViewState() {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .articleList
   &-TextContainer
     display: flex
