@@ -16,12 +16,14 @@ defineProps({ article: Object, slug: String });
 <style lang="sass">
 .articleList
   &-ImageItem
+    display: flex
+    justify-content: center
+    align-items: center
     a
       display: flex
       justify-content: center
+      align-items: center
       width: 100%
       img
-        width: 100%
-        padding: 0 1em
-        max-width: 250px
+        width: 16.5vw
 </style>

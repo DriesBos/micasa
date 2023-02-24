@@ -66,8 +66,12 @@ console.log(route.params.slug);
       li
         padding: 1rem 2rem
         display: flex
-        font-size: 2rem
-        text-transform: lowercase
+        a, span
+          font-size: 2rem
+          font-weight: bold
+          text-transform: lowercase
+          line-height: 2rem
+          font-weight: bold
         & .router-link-active
           border-bottom: $border
     &_Icon

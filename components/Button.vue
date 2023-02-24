@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-const props = defineProps({ active: Object });
+const props = defineProps({ active: Boolean });
 </script>
 
 <style lang="sass" scoped>

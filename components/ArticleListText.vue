@@ -28,7 +28,7 @@ defineProps({ article: Object, slug: String, number: Number });
     opacity: 0
   &-TextItem
     position: relative
-    font-size: 3.5vw
+    font-size: 3vw
     &:hover > .articleList-Stripe
       opacity: 1
     & a
@@ -36,11 +36,17 @@ defineProps({ article: Object, slug: String, number: Number });
       flex-wrap: nowrap
       width: 100%
       & > div
-        &:nth-child(2), &:nth-child(3)
+        font-weight: bold
+        &:nth-child(2)
           flex-grow: 1
+          // border: 1px solid green
+        &:nth-child(3)
+          width: calc(34vw + 4rem)
+          // border: 1px solid green
+          flex-shrink: 0
         &:first-child
           text-align: left
-          width: calc(13vw + 2rem)
+          width: calc(13vw + 4rem)
         &:last-child
           text-align: right
           width: 8vw
