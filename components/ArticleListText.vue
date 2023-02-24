@@ -16,7 +16,7 @@
 defineProps({ article: Object, slug: String, number: Number });
 </script>
 
-<style lang="sass">
+<style lang="sass" scoped>
 .articleList
   &-Stripe
     position: absolute
