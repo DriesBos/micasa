@@ -13,8 +13,12 @@
 
             <template v-if="route.params.slug[1]">
               <div class="header-Nav_Icon">></div>
-              <span>{{ route.params.slug[1] }}</span></template
-            >
+              <NuxtLink :to="route.params.slug[1]">
+                <span>
+                  {{ route.params.slug[1] }}
+                </span>
+              </NuxtLink>
+            </template>
           </li>
           <template v-if="headerMenu">
             <li
@@ -43,25 +47,30 @@ const { data } = await storyblokApi.get('cdn/stories/config', {
 
 const headerMenu = ref(null);
 headerMenu.value = data.story.content.header_menu;
+
+console.log(route.params.slug);
 </script>
 
 <style lang="sass" scoped>
 .header
   display: flex
   justify-content: space-between
+  align-items: center
   &-Logo
-    padding: 1em
+    padding: 1rem 2rem
+    h1
+      font-size: 4rem
   &-Nav
     ul
       display: flex
       li
-        padding: 1em
+        padding: 1rem 2rem
         display: flex
+        font-size: 2rem
+        text-transform: lowercase
+        & .router-link-active
+          border-bottom: $border
     &_Icon
       padding-left: .5em
       padding-right: .5em
-  a
-    text-decoration: none
-    &:hover
-      text-decoration: underline
 </style>
