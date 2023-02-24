@@ -17,10 +17,10 @@ const props = defineProps({ active: Boolean });
   cursor: pointer
   font-family: "Futura PT", Helvetica, Arial, sans-serif
   font-size: 1rem
-  font-weight: bold
+  font-weight: normal
   letter-spacing: .025rem
   &.active
     background: black
-    color: white
+    color: $bg-yellow
     border: 2px solid transparent
 </style>
