@@ -1,11 +1,18 @@
 <template>
   <div class="articleList">
-    <MultiSelector class="articleList-MultiSelector">
+    <MultiSelector
+      class="articleList-MultiSelector"
+      @mouseenter="hoverState = true"
+      @mouseleave="hoverState = false"
+    >
       <Button @click="toggleViewState" :active="viewState">text</Button>
       <Button @click="toggleViewState" :active="!viewState">image</Button>
     </MultiSelector>
     <div class="articleList-Container">
-      <div :class="{ active: viewState }" class="articleList-TextContainer">
+      <div
+        :class="{ active: viewState, hover: hoverState }"
+        class="articleList-TextContainer"
+      >
         <ArticleListText
           v-for="(article, index) in articles"
           :key="article.uuid"
@@ -14,7 +21,10 @@
           :number="index"
         />
       </div>
-      <div :class="{ active: !viewState }" class="articleList-ImageContainer">
+      <div
+        :class="{ active: !viewState, hover: hoverState }"
+        class="articleList-ImageContainer"
+      >
         <ArticleListImages
           v-for="article in articles"
           :key="article.uuid"
@@ -39,6 +49,7 @@ const { data } = await storyblokApi.get('cdn/stories', {
 articles.value = data.stories;
 
 const viewState = ref(false);
+const hoverState = ref(false);
 
 function toggleViewState() {
   viewState.value = !viewState.value;
@@ -53,17 +64,13 @@ function toggleViewState() {
   flex-direction: column
   justify-content: flex-end
   &-MultiSelector
-    width: 100%
     padding: 0 2rem
-    justify-content: flex-end
-    margin-bottom: 0rem
   &-TextContainer
     display: flex
     flex-direction: column
     padding: 2rem
-    z-index: -1
     opacity: .25
-    transition: opacity .33s ease
+    z-index: -1
     filter: blur(.25rem)
     & > div
       margin-bottom: 1rem
@@ -79,19 +86,23 @@ function toggleViewState() {
     justify-content: space-evenly
     justify-content: flex-start
     flex-wrap: wrap
-    z-index: -1
     opacity: .25
+    z-index: -1
     filter: blur(.25rem)
-    transition: opacity .33s ease
     & > div
       flex-basis: 33.3333%
       &:nth-last-child(-n+3)
         margin-bottom: 0
   &-Container
     position: relative
+    transition: all .33s ease
+    & > div.hover
+      opacity: .35
+      filter: blur(.125rem)
+      transition: all .33s ease
     & > div.active
-      opacity: 1
-      z-index: 0
-      transition: opacity .33s ease, blur .165 ease
-      filter: blur(0)
+      opacity: 1 !important
+      z-index: 0 !important
+      filter: blur(0) !important
+      transition: all .33s ease
 </style>
