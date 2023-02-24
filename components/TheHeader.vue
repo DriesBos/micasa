@@ -20,30 +20,35 @@
               </NuxtLink>
             </template>
           </li>
-          <template v-if="headerMenu">
-            <li
-              v-for="blok in headerMenu"
-              class="cursorInteract"
-              :key="blok._uid"
-            >
-              <NuxtLink :to="blok.link.cached_url"
-                >{{ blok.link.story.name }}
-              </NuxtLink>
-            </li>
-          </template>
+          <li class="cursorInteract">
+            <a @click="modal = true">Info</a>
+          </li>
         </ul>
       </nav>
     </div>
+    <Teleport to="body">
+      <div class="modal" v-if="modal" @click="modal = false">
+        <div class="modal-Box">
+          <h2>HEADER</h2>
+          <p>TEXT</p>
+          <Button @click="modal = false">CLOSE</Button>
+        </div>
+      </div>
+    </Teleport>
   </header>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 const route = useRoute();
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/config', {
   version: 'draft',
   resolve_links: 'url',
 });
+
+const modal = ref(false);
 
 const headerMenu = ref(null);
 headerMenu.value = data.story.content.header_menu;
@@ -64,7 +69,7 @@ headerMenu.value = data.story.content.header_menu;
       li
         padding: 1rem 2rem
         display: flex
-        a, span
+        a, span, div
           font-size: 2rem
           font-weight: bold
           text-transform: lowercase
@@ -75,4 +80,24 @@ headerMenu.value = data.story.content.header_menu;
     &_Icon
       padding-left: .5em
       padding-right: .5em
+
+.modal
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: +1
+  background: hsl(100, 100%, 0%, 0.6)
+  &-Box
+    background: $bg-white
+    width: 300px
+    height: 300px
+    border-radius: 1rem 1rem 0 0
+    display: flex
+    justify-content: center
+    align-items: center
 </style>
