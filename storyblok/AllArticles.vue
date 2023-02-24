@@ -1,6 +1,6 @@
 <template>
   <div class="articleList">
-    <MultiSelector>
+    <MultiSelector class="articleList-MultiSelector">
       <Button @click="toggleViewState">text</Button>
       <Button @click="toggleViewState">image</Button>
     </MultiSelector>
@@ -45,9 +45,19 @@ function toggleViewState() {
 
 <style lang="sass">
 .articleList
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  &-MultiSelector
+    width: 100%
+    padding: 0 2rem
+    justify-content: flex-end
+    margin-bottom: 0rem
   &-TextContainer
     display: flex
     flex-direction: column
+    padding: 2rem
   &-ImageContainer
     display: flex
     justify-content: space-evenly

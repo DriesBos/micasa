@@ -2,19 +2,25 @@
 body
   background: $bg-yellow
 
+main
+  min-height: 100vh
+  display: flex
+  flex-direction: column
 img
   width: 100%
 
 .view
   &-Page
-    padding: 1em
+    display: flex
+    flex-direction: column
+    flex-grow: 1
 
     & > div, & > a
-      margin-bottom: 1em
+      // margin-bottom: 1em
 
   .articles
     & > a
-      margin-bottom: 1em
+      // margin-bottom: 1em
 
 // Cursor Composable
 .cursor
@@ -26,8 +32,7 @@ img
   pointer-events: none
   background: $color
   transition: all .165s ease
-  &.active
-    background: green
+
   @media ( hover: none )
     opacity: 0 !important
     display: none !important
