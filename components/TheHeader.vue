@@ -47,8 +47,6 @@ const { data } = await storyblokApi.get('cdn/stories/config', {
 
 const headerMenu = ref(null);
 headerMenu.value = data.story.content.header_menu;
-
-console.log(route.params.slug);
 </script>
 
 <style lang="sass" scoped>

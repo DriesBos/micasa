@@ -53,7 +53,6 @@ const hoverState = ref(false);
 
 function toggleViewState() {
   viewState.value = !viewState.value;
-  console.log(viewState.value);
 }
 </script>
 
@@ -69,6 +68,7 @@ function toggleViewState() {
     display: flex
     flex-direction: column
     padding: 2rem
+    padding-bottom: 1rem
     opacity: .25
     z-index: -1
     filter: blur(.25rem)
@@ -81,7 +81,7 @@ function toggleViewState() {
     left: 2rem
     top: 2rem
     right: 2rem
-    bottom: 2rem
+    bottom: 1rem
     display: flex
     justify-content: space-evenly
     justify-content: flex-start
@@ -95,14 +95,14 @@ function toggleViewState() {
         margin-bottom: 0
   &-Container
     position: relative
-    transition: all .33s ease
+    transition: all .33s ease-in-out
     & > div.hover
       opacity: .35
       filter: blur(.125rem)
-      transition: all .33s ease
+      transition: all .33s ease-in-out
     & > div.active
       opacity: 1 !important
       z-index: 0 !important
       filter: blur(0) !important
-      transition: all .33s ease
+      transition: all .33s ease-in-out
 </style>
