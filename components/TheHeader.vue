@@ -37,9 +37,18 @@
     <Teleport to="body">
       <div class="modal" :class="modal" @click="modal = 'hidden'">
         <div class="modal-Box">
-          <h2>HEADER</h2>
-          <p>TEXT</p>
-          <Button @click="modal = 'hidden'">CLOSE</Button>
+          <div v-if="infoContent" class="modal-Box_Content">
+            <div v-for="blok in infoContent" :key="blok._uid">
+              <Markdown :content="blok.content" />
+            </div>
+          </div>
+          <div class="icon cursorInteract">
+            <nuxt-icon
+              @click="modal = 'hidden'"
+              class="icon-Span"
+              name="close"
+            />
+          </div>
         </div>
       </div>
     </Teleport>
@@ -50,11 +59,18 @@
 import { ref } from 'vue';
 
 const route = useRoute();
+
 const storyblokApi = useStoryblokApi();
 const { data } = await storyblokApi.get('cdn/stories/config', {
   version: 'draft',
   resolve_links: 'url',
 });
+
+const headerMenu = ref(null);
+headerMenu.value = data.story.content.header_menu;
+
+const infoContent = ref(null);
+infoContent.value = data.story.content.info_content;
 
 const modal = ref('hidden');
 
@@ -67,9 +83,6 @@ function modalMouseEnter() {
     modal.value = 'full';
   }
 }
-
-const headerMenu = ref(null);
-headerMenu.value = data.story.content.header_menu;
 </script>
 
 <style lang="sass" scoped>
@@ -118,12 +131,20 @@ headerMenu.value = data.story.content.header_menu;
     width: calc(100vw - 2rem)
     height: calc(100vh - 2rem)
     border-radius: 2rem 2rem 0 0
+    padding: 6rem 2rem
     display: flex
-    justify-content: center
+    flex-direction: column
+    justify-content: flex-start
     align-items: center
     pointer-events: auto
     overflow: auto
     transition: top .165s ease-in-out, width .33s ease-in-out
+    &::-webkit-scrollbar
+      display: none
+    .icon
+      position: absolute
+      top: 2rem
+      right: 2rem
   &.hidden
     background: hsl(100, 100%, 0%, 0)
     .modal-Box
@@ -134,8 +155,9 @@ headerMenu.value = data.story.content.header_menu;
       top: calc(100vh - 2rem)
   &.full
     background: hsl(100, 100%, 0%, 0.6)
+    pointer-events: auto
     .modal-Box
       top: 2rem
       width: 100vw
-      transition: top .33s ease-in-out
+      transition: top .33s ease-in-out, width .165s ease-in-out .165s
 </style>
