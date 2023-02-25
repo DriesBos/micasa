@@ -31,6 +31,7 @@ export default defineNuxtConfig({
   ],
 
   modules: [
+    'nuxt-icons',
     [
       '@storyblok/nuxt',
       {
