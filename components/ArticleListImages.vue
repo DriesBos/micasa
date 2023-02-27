@@ -25,6 +25,7 @@ defineProps({ article: Object, slug: String });
     height: .5rem
     background: black
     opacity: 0
+    pointer-events: none
   &-ImageItem
     position: relative
     display: flex

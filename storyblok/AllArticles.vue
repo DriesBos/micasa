@@ -48,7 +48,7 @@ const { data } = await storyblokApi.get('cdn/stories', {
 });
 articles.value = data.stories;
 
-const viewState = ref(false);
+const viewState = ref(true);
 const hoverState = ref(false);
 
 function toggleViewState() {

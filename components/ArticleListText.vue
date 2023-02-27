@@ -26,6 +26,7 @@ defineProps({ article: Object, slug: String, number: Number });
     height: .5rem
     background: black
     opacity: 0
+    pointer-events: none
   &-TextItem
     position: relative
     font-size: 3vw
