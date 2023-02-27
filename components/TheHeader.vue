@@ -11,7 +11,10 @@
           <li class="cursorInteract">
             <NuxtLink to="/">locations</NuxtLink>
             <template v-if="route.params.slug[1]">
-              <div class="header-Nav_Icon">></div>
+              <div class="header-Nav_Icon">
+                <nuxt-icon class="icon-Arrow_right" name="arrow-right" />
+              </div>
+
               <NuxtLink :to="route.params.slug[1]">
                 <span>
                   {{ pageTitle }}
@@ -118,6 +121,8 @@ function modalMouseEnter() {
       li
         padding: 1rem 2rem
         display: flex
+        a:hover
+          border-bottom: $border
         a, span, div
           font-size: 2rem
           font-weight: bold
