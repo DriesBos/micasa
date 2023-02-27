@@ -63,25 +63,25 @@ function toggleViewState() {
   flex-direction: column
   justify-content: flex-end
   &-MultiSelector
-    padding: 0 2rem
+    padding: 0 1rem
   &-TextContainer
     display: flex
     flex-direction: column
-    padding: 2rem
-    padding-bottom: 1rem
+    padding: 2rem 1rem
+    padding-bottom: .5rem
     opacity: .25
     z-index: -1
     filter: blur(.25rem)
     & > div
-      margin-bottom: 1rem
+      margin-bottom: .5rem
       &:last-child
         margin-bottom: 0
   &-ImageContainer
     position: absolute
-    left: 2rem
+    left: 1rem
     top: 2rem
-    right: 2rem
-    bottom: 1rem
+    right: 1rem
+    bottom: .5rem
     display: flex
     justify-content: space-evenly
     justify-content: flex-start
