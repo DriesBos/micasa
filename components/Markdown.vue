@@ -1,5 +1,5 @@
 <template>
-  <div v-html="resolvedRichText" class="markdown"></div>
+  <div v-editable="props" v-html="resolvedRichText" class="markdown"></div>
 </template>
 
 <script setup>

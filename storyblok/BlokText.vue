@@ -1,6 +1,6 @@
 <template>
-  <div v-editable="blok">
-    <img :src="blok.image.filename" :alt="blok.image.alt" />
+  <div v-editable="blok" class="textBlok">
+    <Markdown :content="blok.content" />
   </div>
 </template>
 
