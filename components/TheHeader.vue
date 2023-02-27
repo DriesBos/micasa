@@ -107,7 +107,7 @@ function modalMouseEnter() {
   justify-content: space-between
   align-items: center
   &-Logo
-    padding: 1rem 1rem
+    padding: 1rem var(--spacing-sides)
     padding-bottom: 0
     h1
       font-size: 4rem
@@ -126,6 +126,8 @@ function modalMouseEnter() {
           font-weight: bold
         & .router-link-active
           border-bottom: $border
+        &:last-child
+          padding-right: var(--spacing-sides)
     &_Icon
       padding-left: .5em
       padding-right: .5em
