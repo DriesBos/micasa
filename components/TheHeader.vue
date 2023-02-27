@@ -10,25 +10,22 @@
         <ul>
           <li class="cursorInteract">
             <NuxtLink to="/">locations</NuxtLink>
-
             <template v-if="route.params.slug[1]">
               <div class="header-Nav_Icon">></div>
               <NuxtLink :to="route.params.slug[1]">
                 <span>
-                  {{ route.params.slug[1] }}
+                  {{ pageTitle }}
                 </span>
               </NuxtLink>
             </template>
           </li>
-          <li class="cursorInteract">
-            <a
-              @mouseenter="modalMouseEnter"
-              @mouseleave="
-                modal == 'full' ? modal == 'full' : (modal = 'hidden')
-              "
-              @click="modal = 'full'"
-              >Info</a
-            >
+          <li
+            class="cursorInteract"
+            @mouseenter="modalMouseEnter"
+            @mouseleave="modal == 'full' ? modal == 'full' : (modal = 'hidden')"
+            @click="modal = 'full'"
+          >
+            <a>Info</a>
           </li>
         </ul>
       </nav>
@@ -37,17 +34,17 @@
     <Teleport to="body">
       <div class="modal" :class="modal" @click="modal = 'hidden'">
         <div class="modal-Box">
-          <div v-if="infoContent" class="modal-Box_Content">
-            <div v-for="blok in infoContent" :key="blok._uid">
-              <Markdown :content="blok.content" />
-            </div>
-          </div>
           <div class="icon cursorInteract">
             <nuxt-icon
               @click="modal = 'hidden'"
               class="icon-Span"
               name="close"
             />
+          </div>
+          <div v-if="infoContent" class="modal-Box_Content">
+            <div v-for="blok in infoContent" :key="blok._uid">
+              <Markdown :content="blok.content" />
+            </div>
           </div>
         </div>
       </div>
@@ -56,7 +53,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUpdated } from 'vue';
 
 const route = useRoute();
 
@@ -73,6 +70,25 @@ const infoContent = ref(null);
 infoContent.value = data.story.content.info_content;
 
 const modal = ref('hidden');
+
+const pageTitle = ref('page title');
+
+function updateTitle() {
+  if (route.params.slug[0] === 'blog') {
+    let str = '';
+    str = route.params.slug[1];
+    str = str.replace(/-/g, ' ');
+    pageTitle.value = str;
+  }
+}
+
+onMounted(() => {
+  updateTitle();
+});
+
+onUpdated(() => {
+  updateTitle();
+});
 
 function modalMouseEnter() {
   if (modal.value === 'hidden') {
@@ -91,9 +107,11 @@ function modalMouseEnter() {
   justify-content: space-between
   align-items: center
   &-Logo
-    padding: 1rem 2rem
+    padding: 1rem 1rem
+    padding-bottom: 0
     h1
       font-size: 4rem
+      line-height: 4rem
   &-Nav
     ul
       display: flex
@@ -128,8 +146,9 @@ function modalMouseEnter() {
   &-Box
     position: fixed
     background: $bg-white
-    width: calc(100vw - 2rem)
-    height: calc(100vh - 2rem)
+    width: 100%
+    transform: scale(0.96)
+    height: calc(100vh - 3rem)
     border-radius: 2rem 2rem 0 0
     padding: 6rem 2rem
     display: flex
@@ -138,7 +157,7 @@ function modalMouseEnter() {
     align-items: center
     pointer-events: auto
     overflow: auto
-    transition: top .165s ease-in-out, width .33s ease-in-out
+    transition: top .165s ease-in-out, width .33s ease-in-out, transform .33s ease-in-out
     &::-webkit-scrollbar
       display: none
     .icon
@@ -152,12 +171,13 @@ function modalMouseEnter() {
   &.half
     background: hsl(100, 100%, 0%, 0.2)
     .modal-Box
-      top: calc(100vh - 2rem)
+      top: calc(100vh - 4rem)
   &.full
     background: hsl(100, 100%, 0%, 0.6)
     pointer-events: auto
     .modal-Box
-      top: 2rem
-      width: 100vw
-      transition: top .33s ease-in-out, width .165s ease-in-out .165s
+      top: 3rem
+      width: 100%
+      transform: scale(1)
+      transition: top .33s ease-in-out, width .165s ease-in-out .165s, transform .33s ease-in-out
 </style>
