@@ -59,7 +59,7 @@
   &-Right
     a, p
       color: white
-      font-size: 1rem
+      font-size: 2rem
     & > div
       flex-grow: 1
     &_Top
@@ -81,7 +81,9 @@
 .newsletter
   &-Input
     display: flex
-    border: 1px solid white
+    border: 2px solid white
+    font-size: 2rem
+    height: 4rem
     input
       background: transparent
       flex-grow: 1
@@ -90,8 +92,8 @@
       display: flex
       align-items: center
       justify-content: center
-      width: 3rem
-      height: 3rem
+      width: 4rem
+      height: 4rem
       border-left: 2px solid white
       color: white !important
     svg
