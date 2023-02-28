@@ -1,6 +1,6 @@
 <template>
-  <div v-editable="article" class="articleList-TextItem">
-    <div class="articleList-Stripe" />
+  <div v-editable="article" class="articlesList-TextItem">
+    <div class="articlesList-Stripe" />
     <NuxtLink :to="slug">
       <div>AP—00{{ number + 1 }}</div>
       <div>{{ article.title }}</div>
@@ -17,7 +17,7 @@ defineProps({ article: Object, slug: String, number: Number });
 </script>
 
 <style lang="sass" scoped>
-.articleList
+.articlesList
   &-Stripe
     position: absolute
     top: 50%
@@ -30,7 +30,7 @@ defineProps({ article: Object, slug: String, number: Number });
   &-TextItem
     position: relative
     font-size: 3vw
-    &:hover > .articleList-Stripe
+    &:hover > .articlesList-Stripe
       opacity: 1
     & a
       display: flex

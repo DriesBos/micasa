@@ -1,19 +1,19 @@
 <template>
-  <div class="articleList">
+  <div class="articlesList">
     <MultiSelector
-      class="articleList-MultiSelector"
+      class="articlesList-MultiSelector"
       @mouseenter="hoverState = true"
       @mouseleave="hoverState = false"
     >
       <Button @click="toggleViewState" :active="viewState">text</Button>
       <Button @click="toggleViewState" :active="!viewState">image</Button>
     </MultiSelector>
-    <div class="articleList-Container">
+    <div class="articlesList-Container">
       <div
         :class="{ active: viewState, hover: hoverState }"
-        class="articleList-TextContainer"
+        class="articlesList-TextContainer"
       >
-        <ArticleListText
+        <ArticlesListText
           v-for="(article, index) in articles"
           :key="article.uuid"
           :article="article.content"
@@ -23,9 +23,9 @@
       </div>
       <div
         :class="{ active: !viewState, hover: hoverState }"
-        class="articleList-ImageContainer"
+        class="articlesList-ImageContainer"
       >
-        <ArticleListImages
+        <ArticlesListImages
           v-for="article in articles"
           :key="article.uuid"
           :article="article.content"
@@ -57,7 +57,7 @@ function toggleViewState() {
 </script>
 
 <style lang="sass">
-.articleList
+.articlesList
   flex-grow: 1
   display: flex
   flex-direction: column

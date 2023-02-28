@@ -1,6 +1,6 @@
 <template>
-  <div class="articleList-ImageItem">
-    <div class="articleList-Stripe" />
+  <div class="articlesList-ImageItem">
+    <div class="articlesList-Stripe" />
     <NuxtLink :to="'/' + slug" v-editable="article">
       <img
         :src="article.image.filename + '/m/600x0'"
@@ -15,7 +15,7 @@ defineProps({ article: Object, slug: String });
 </script>
 
 <style lang="sass" scoped>
-.articleList
+.articlesList
   &-Stripe
     position: absolute
     top: 50%
@@ -31,7 +31,7 @@ defineProps({ article: Object, slug: String });
     display: flex
     justify-content: center
     align-items: center
-    &:hover > .articleList-Stripe
+    &:hover > .articlesList-Stripe
       opacity: 1
     a
       display: flex
