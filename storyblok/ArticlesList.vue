@@ -77,6 +77,7 @@ function toggleViewState() {
     flex-direction: column
     justify-content: space-between
     padding: 0 var(--spacing-sides)
+    padding-bottom: .5rem
     opacity: .25
     z-index: -1
     filter: blur(.25rem)

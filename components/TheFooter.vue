@@ -11,17 +11,17 @@
     <div class="footer-Right">
       <div class="footer-Right_Top">
         <div>
+          <a class="cursorInteract" href="https://www.instagram.com">Twitter</a>
+          <a class="cursorInteract" href="https://www.instagram.com"
+            >Instagram</a
+          >
+        </div>
+        <div>
           <a class="cursorInteract" href="https://www.instagram.com"
             >info@micasa.com</a
           >
           <a class="cursorInteract" href="https://www.instagram.com"
-            >+351 242424240</a
-          >
-        </div>
-        <div>
-          <a class="cursorInteract" href="https://www.instagram.com">Twitter</a>
-          <a class="cursorInteract" href="https://www.instagram.com"
-            >Instagram</a
+            >+351242424240</a
           >
         </div>
       </div>
@@ -53,7 +53,7 @@
     column-gap: 1rem
   &-Left_Logo
     h1
-      font-size: 2.5rem
+      font-size: 4rem
       line-height: 0.6
       color: $color-light
   &-Right
@@ -65,7 +65,7 @@
     &_Top
       display: flex
       flex-wrap: nowrap
-      margin-bottom: 1rem
+      margin-bottom: var(--spacing-base)
       & > div
         flex-basis: 50%
         display: flex

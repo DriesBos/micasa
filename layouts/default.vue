@@ -95,12 +95,13 @@ export default {
   z-index: 999
   pointer-events: none
   background: $color
-  transition: width .165s ease, height .165s ease
+  transition: width .165s ease, height .165s ease, background .165s ease
+  &.invert
+    background: $color-light
   &.active
     width: 3rem
     height: 3rem
-  &.invert
-    background: $color-light
+    background: $color-support
 
   @media ( hover: none )
     opacity: 0 !important

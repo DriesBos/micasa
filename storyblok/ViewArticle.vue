@@ -38,7 +38,6 @@ const styleObject = reactive({
     display: flex
     flex-direction: column
     justify-content: flex-end
-    z-index: +1
     &_Title
       font-size: 10vw
       padding: 0 var(--spacing-sides)
@@ -47,6 +46,7 @@ const styleObject = reactive({
         line-height: 0.5
   &-Content
     margin-bottom: var(--spacing-sections)
+    z-index: -1
     & > div
       margin-bottom: var(--spacing-base)
       &:last-child
