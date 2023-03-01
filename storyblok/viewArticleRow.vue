@@ -17,7 +17,7 @@ const props = defineProps({ blok: Object });
   display: flex
   flex-wrap: nowrap
   padding: 0 var(--spacing-sides)
-  column-gap: 1rem
+  column-gap: var(--spacing-base)
   & > div
     flex-grow: 1
     min-width: calc(50% - .5rem)

@@ -119,7 +119,7 @@ function modalMouseEnter() {
     ul
       display: flex
       li
-        padding: 1rem 2rem
+        padding: 1rem var(--spacing-sides)
         display: flex
         a:hover
           border-bottom: $border
@@ -157,7 +157,7 @@ function modalMouseEnter() {
     transform: scale(0.96)
     height: calc(100vh - 3rem)
     border-radius: 2rem 2rem 0 0
-    padding: 6rem 2rem
+    padding: var(--spacing-sections) var(--spacing-sides)
     display: flex
     flex-direction: column
     justify-content: flex-start

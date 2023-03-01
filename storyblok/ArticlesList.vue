@@ -63,6 +63,7 @@ function toggleViewState() {
   flex-direction: column
   justify-content: flex-end
   min-height: calc(100vh - 5rem)
+  margin-bottom: var(--spacing-sections)
   &-MultiSelector
     padding: 0 var(--spacing-sides)
   &-TextContainer

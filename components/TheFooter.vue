@@ -43,7 +43,7 @@
   flex-wrap: nowrap
   background: $bg-black
   color: $color-light
-  padding: 4rem 1rem 1rem 1rem
+  padding: var(--spacing-sections) var(--spacing-sides) var(--spacing-base) var(--spacing-sides)
   column-gap: 1rem
   & > div
     display: flex

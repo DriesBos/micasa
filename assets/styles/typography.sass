@@ -27,19 +27,20 @@
 html
   font-size: 16px
 
-// @media screen and (min-width: 800px)
-//   html
-//     font-size: calc(16px + 6 * ((100vw - 800px) / 1400))
+@media screen and (min-width: 800px)
+  html
+    font-size: calc(16px + 6 * ((100vw - 800px) / 1400))
 
-// @media screen and (min-width: 2200px)
-//   html
-//     font-size: 22px
+@media screen and (min-width: 2200px)
+  html
+    font-size: 22px
 
 h1, h2, h3, p, a
   word-wrap: break-word
   overflow-wrap: break-word
   word-break: normal
   hyphens: auto
+  font-size: 2rem
 
 .markdown p // No broken words in regular sized text paragraphs
   word-wrap: normal
@@ -50,6 +51,8 @@ h1, h2, h3, p, a
 li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
   font-family: "Futura PT", Helvetica, Arial, sans-serif
   line-height: 1.5
+  font-size: 2rem
+  font-weight: bold
   color: $color
   font-style: normal
   font-weight: normal
@@ -58,39 +61,34 @@ li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, 
 
 .displayFont
   font-family: "Clearface", Helvetica, Arial, sans-serif
+  font-weight: normal
   li, h1, h2, h3, h4, h5, blockquote, p, a, a:link, a:visited, a:hover, a:active, span, input, button
     font-family: "Clearface", Helvetica, Arial, sans-serif
+    font-weight: normal
 
 a
   text-decoration: none
   &:hover, &:active
     text-decoration: none
+    
 .markdown
-  p
-    font-size: $type-size-p
-  h1
-    font-size: $type-size-h1
-  h2
-    font-size: $type-size-h2
+  p, h1, h2, h3, h4, h5, blockquote
+    margin-bottom: $lineheight
+    font-size: 2rem
   h3
     font-family: "Clearface", Helvetica, Arial, sans-serif
     font-size: 12vmin
     line-height: 13.2vmin
-  h4
-    font-size: $type-size-h4
-  h5
-    font-size: $type-size-h5
   a
     color: $color
     text-decoration: underline
+    font-size: 2rem
   strong, b
     font-weight: bold
   em, i
     font-style: italic
   blockquote, blockquote p
     font-size: $type-size-blockquote
-  p, h1, h2, h3, h4, h5, blockquote
-    margin-bottom: $lineheight
   p
     min-height: $lineheight
 
