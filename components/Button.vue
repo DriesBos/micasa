@@ -1,5 +1,5 @@
 <template>
-  <div class="button" :class="{ active: active }">
+  <div class="button cursorInteract" :class="{ active: active }">
     <slot />
   </div>
 </template>
