@@ -1,7 +1,10 @@
 <template>
   <div class="articlesList-ImageItem">
-    <div class="articlesList-Stripe" />
-    <NuxtLink :to="'/' + slug" v-editable="article" class="cursorInteract">
+    <NuxtLink
+      class="articlesList-ImageItem_Inner cursorInteract"
+      :to="'/' + slug"
+      v-editable="article"
+    >
       <img
         :src="article.thumb_horizontal.filename"
         :alt="article.thumb_horizontal.alt"
@@ -14,30 +17,25 @@
 defineProps({ article: Object, slug: String });
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .articlesList
-  &-Stripe
-    position: absolute
-    top: 50%
-    left: calc(25% - 1rem)
-    width: calc(50% + 2rem)
-    transform: translate(0, -50%)
-    height: .5rem
-    background: black
-    opacity: 0
-    pointer-events: none
   &-ImageItem
     position: relative
     display: flex
     justify-content: center
     align-items: center
-    &:hover > .articlesList-Stripe
-      opacity: 1
-    a
+    height: 33.3333%
+    overflow: hidden
+    &_Inner
       display: flex
       justify-content: center
       align-items: center
-      width: 100%
+      height: 16vh
+      width: 24vh
+      overflow: hidden
+      object-fit: contain
       img
-        width: 16.5vw
+        height: 100%
+        width: 100%
+        object-fit: cover
 </style>

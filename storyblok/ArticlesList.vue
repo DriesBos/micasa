@@ -66,7 +66,7 @@ function toggleViewState() {
   margin-bottom: var(--spacing-sections)
   &-MultiSelector
     padding: 0 var(--spacing-sides)
-    margin-top: var(--spacing-sections)
+    margin-top: 10vh
     margin-bottom: 1rem
   &-Container
     position: relative

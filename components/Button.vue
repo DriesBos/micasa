@@ -19,6 +19,7 @@ const props = defineProps({ active: Boolean });
   font-size: 1rem
   font-weight: normal
   letter-spacing: .025rem
+  cursor: none
   &.active
     background: black
     color: $bg-yellow
