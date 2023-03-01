@@ -7,7 +7,7 @@
         :key="article._uid"
         :to="'/' + article.full_slug"
       >
-        <div class="carousel-Item">
+        <div class="carousel-Item cursorInteract">
           <div class="carousel-Item_Image">
             <img
               :src="article.content.thumb_vertical.filename"

@@ -1,7 +1,7 @@
 <template>
   <div class="articlesList-ImageItem">
     <div class="articlesList-Stripe" />
-    <NuxtLink :to="'/' + slug" v-editable="article">
+    <NuxtLink :to="'/' + slug" v-editable="article" class="cursorInteract">
       <img
         :src="article.thumb_horizontal.filename"
         :alt="article.thumb_horizontal.alt"

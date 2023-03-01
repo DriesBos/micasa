@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer cursorInvert">
     <div class="footer-Left">
       <div class="footer-Left_Logo displayFont cursorInteract">
         <NuxtLink to="/">

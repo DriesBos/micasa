@@ -1,5 +1,5 @@
 <template>
-  <div v-editable="article" class="articlesList-TextItem">
+  <div v-editable="article" class="articlesList-TextItem cursorInteract">
     <div class="articlesList-Stripe" />
     <NuxtLink :to="slug">
       <div>AP—00{{ number + 1 }}</div>
