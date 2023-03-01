@@ -7,12 +7,15 @@
         </h1>
       </div>
     </div>
-    <div class="articleContent">
+    <div class="article-Content">
       <StoryblokComponent
         v-for="blok in blok.blocks"
         :key="blok._uid"
         :blok="blok"
       />
+    </div>
+    <div class="article-Carousel">
+      <ArticlesCarousel />
     </div>
   </div>
 </template>
@@ -41,11 +44,10 @@ const styleObject = reactive({
       margin-bottom: 1rem
       h1
         line-height: 0.5
-
-.articleContent
-  margin-bottom: 1rem
-  & > div
-    margin-bottom: 1rem
-    &:last-child
-      margin-bottom: 0
+  &-Content
+    margin-bottom: 8rem
+    & > div
+      margin-bottom: 1rem
+      &:last-child
+        margin-bottom: 0
 </style>

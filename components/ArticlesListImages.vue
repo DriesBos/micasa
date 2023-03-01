@@ -3,8 +3,8 @@
     <div class="articlesList-Stripe" />
     <NuxtLink :to="'/' + slug" v-editable="article">
       <img
-        :src="article.image.filename + '/m/600x0'"
-        :alt="article.image.alt"
+        :src="article.thumb_horizontal.filename"
+        :alt="article.thumb_horizontal.alt"
       />
     </NuxtLink>
   </div>
