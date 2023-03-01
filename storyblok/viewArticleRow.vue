@@ -20,5 +20,5 @@ const props = defineProps({ blok: Object });
   column-gap: var(--spacing-base)
   & > div
     flex-grow: 1
-    min-width: calc(50% - .5rem)
+    min-width: calc(50% - 1rem)
 </style>

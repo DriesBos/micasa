@@ -47,10 +47,10 @@ articles.value = data.stories;
   flex-direction: column
   align-items: center
   &-Divider
-    width: calc(100% - 2rem)
+    width: calc(100% - 4rem)
     padding: 0 var(--spacing-sides)
     background: $color
-    height: var(--spacing-base)
+    height: 1rem
   &-Row
     width: 100vw
     display: flex

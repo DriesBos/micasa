@@ -134,8 +134,8 @@ function modalMouseEnter() {
         &:last-child
           padding-right: var(--spacing-sides)
     &_Icon
-      padding-left: .5em
-      padding-right: .5em
+      padding-left: 1rem
+      padding-right: 1rem
 
 .modal
   position: absolute
