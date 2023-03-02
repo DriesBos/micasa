@@ -7,6 +7,9 @@
       <div>
         {{ article.location }}
       </div>
+      <div>
+        {{ article.location_type }}
+      </div>
       <div>{{ article.date }}</div>
     </NuxtLink>
   </div>
@@ -38,16 +41,15 @@ defineProps({ article: Object, slug: String, number: Number });
       width: 100%
       & > div
         font-weight: bold
-        &:nth-child(2)
-          flex-grow: 1
-          // border: 1px solid green
-        &:nth-child(3)
-          width: calc(34vw + 4rem)
-          // border: 1px solid green
-          flex-shrink: 0
         &:first-child
           text-align: left
-          width: calc(13vw + 4rem)
+          width: calc(13vw + 2rem)
+        &:nth-child(2) // Name
+          width: calc(22vw + 4rem)
+        &:nth-child(3) // Location
+          flex-grow: 1
+        &:nth-child(4) // Type
+          flex-shrink: 0
         &:last-child
           text-align: right
           width: 8vw
