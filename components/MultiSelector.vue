@@ -7,8 +7,9 @@
 <style lang="sass">
 .multiSelector
   display: flex
-  & > div
-    margin-right: 1em
-    &:last-child
-      margin-right: 0
+  flex-wrap: nowrap
+  border: 2px solid $color
+  border-radius: 1000px
+  & > .btn
+    border: 0 !important
 </style>

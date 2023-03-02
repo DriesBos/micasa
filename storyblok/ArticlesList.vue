@@ -1,13 +1,20 @@
 <template>
   <div class="articlesList">
-    <MultiSelector
-      class="articlesList-MultiSelector"
-      @mouseenter="hoverState = true"
-      @mouseleave="hoverState = false"
-    >
-      <Button @click="toggleViewState" :active="viewState">text</Button>
-      <Button @click="toggleViewState" :active="!viewState">image</Button>
-    </MultiSelector>
+    <div class="articlesList-Filters">
+      <MultiSelector
+        class="articlesList-MultiSelector"
+        @mouseenter="hoverState = true"
+        @mouseleave="hoverState = false"
+      >
+        <Button @click="toggleViewState" :active="viewState">text</Button>
+        <Button @click="toggleViewState" :active="!viewState">image</Button>
+      </MultiSelector>
+      <MultiSelector class="articlesList-MultiSelector">
+        <Button @click="toggleViewState" :active="viewState">Urban</Button>
+        <Button @click="toggleViewState" :active="!viewState">Rural</Button>
+        <Button @click="toggleViewState" :active="!viewState">Nature</Button>
+      </MultiSelector>
+    </div>
     <div class="articlesList-Container">
       <div
         :class="{ active: viewState, hover: hoverState }"
@@ -64,10 +71,16 @@ function toggleViewState() {
   justify-content: flex-end
   min-height: calc(100vh - 5rem)
   margin-bottom: var(--spacing-sections)
-  &-MultiSelector
+  &-Filters
+    display: flex
+    justify-content: flex-end
     padding: 0 var(--spacing-sides)
     margin-top: 10vh
-    margin-bottom: 1rem
+    margin-bottom: var(--spacing-base)
+    & > div
+      margin-right: 2rem
+      &:last-child
+        margin-right: 0
   &-Container
     position: relative
     flex-grow: 1

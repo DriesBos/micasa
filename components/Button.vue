@@ -1,5 +1,5 @@
 <template>
-  <div class="button cursorInteract" :class="{ active: active }">
+  <div class="btn cursorInteract" :class="{ active: active }">
     <slot />
   </div>
 </template>
@@ -9,9 +9,9 @@ const props = defineProps({ active: Boolean });
 </script>
 
 <style lang="sass" scoped>
-.button
+.btn
   display: flex
-  border: 2px solid black
+  border: 2px solid $color
   border-radius: 1000px
   padding: .25em 1em
   cursor: pointer
