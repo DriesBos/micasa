@@ -10,7 +10,8 @@
         <Button @click="toggleViewState" :active="!viewState">image</Button>
       </MultiSelector>
       <MultiSelector class="articlesList-MultiSelector">
-        <Button @click="toggleViewState" :active="viewState">Urban</Button>
+        <Button @click="toggleViewState" :active="viewState">All</Button>
+        <Button @click="toggleViewState" :active="!viewState">Urban</Button>
         <Button @click="toggleViewState" :active="!viewState">Rural</Button>
         <Button @click="toggleViewState" :active="!viewState">Nature</Button>
       </MultiSelector>
