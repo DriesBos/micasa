@@ -11,5 +11,5 @@
   border: 2px solid $color
   border-radius: 1000px
   & > .btn
-    border: 0 !important
+    border: 0
 </style>
