@@ -14,9 +14,9 @@
         :blok="blok"
       />
     </div>
-    <div class="article-Carousel">
+    <!-- <div class="article-Carousel">
       <ArticlesCarousel />
-    </div>
+    </div> -->
   </div>
 </template>
 ß
