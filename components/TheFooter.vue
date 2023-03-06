@@ -20,7 +20,9 @@
       <div class="newsletter-Title"><p>Newsletter</p></div>
       <div class="newsletter-Input">
         <input placeholder="Your email.." />
-        <nuxt-icon class="icon icon-Arrow_right" name="arrow-right" />
+        <div class="newsletter-Icon">
+          <nuxt-icon class="icon icon-Arrow" name="arrow-right" />
+        </div>
       </div>
     </div>
   </footer>
@@ -47,9 +49,11 @@
       line-height: 0.6
       color: $color-light
 
+
 .newsletter
   &-Input
     display: flex
+    flex-wrap: nowrap
     border: 2px solid $color-light
     font-size: 2rem
     height: 3rem
@@ -57,17 +61,15 @@
       background: transparent
       flex-grow: 1
       padding: 0 1rem
-    .icon
-      display: flex
-      align-items: center
-      justify-content: center
-      width: 3rem
       height: 100%
-      border-left: 2px solid white
+  &-Icon
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 3rem
+    height: 100%
+    border-left: 2px solid white
+    .icon
       color: $color-light
-    svg
-      width: 2rem !important
-      height: 2rem !important
-      margin-bottom: 0 !important
-      object-fit: contain
 </style>
