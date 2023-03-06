@@ -134,6 +134,8 @@ function modalMouseEnter() {
           text-transform: lowercase
           line-height: 2rem
           font-weight: bold
+        a span
+          text-transform: capitalize
         & .router-link-active
           border-bottom: $border
         &:last-child
