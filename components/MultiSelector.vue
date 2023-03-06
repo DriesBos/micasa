@@ -13,7 +13,7 @@
     border: 0
     border-radius: 0
     margin: 1rem var(--spacing-sides)
-    margin-right: 1rem
+    margin-right: .5rem
     font-family: "Futura PT", Helvetica, Arial, sans-serif
     font-size: 2rem
     font-weight: bold

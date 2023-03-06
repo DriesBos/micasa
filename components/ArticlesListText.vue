@@ -7,9 +7,9 @@
       <div>
         {{ article.location }}
       </div>
-      <div>
+      <!-- <div>
         {{ article.location_type }}
-      </div>
+      </div> -->
       <div>{{ article.date }}</div>
     </NuxtLink>
   </div>
@@ -32,24 +32,23 @@ defineProps({ article: Object, slug: String, number: Number });
     pointer-events: none
   &-TextItem
     position: relative
-    font-size: 3vw
     &:hover > .articlesList-Stripe
       opacity: 1
     & a
       display: flex
       flex-wrap: nowrap
       width: 100%
+      font-size: 3.2vw
+      font-weight: bold
       & > div
         font-weight: bold
         &:first-child
           text-align: left
           width: calc(13vw + 2rem)
         &:nth-child(2) // Name
-          width: calc(22vw + 4rem)
+          width: calc(25vw + 4rem)
         &:nth-child(3) // Location
           flex-grow: 1
-        &:nth-child(4) // Type
-          flex-shrink: 0
         &:last-child
           text-align: right
           width: 8vw
