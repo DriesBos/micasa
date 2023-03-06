@@ -14,9 +14,7 @@
         :blok="blok"
       />
     </div>
-    <div class="article-Carousel">
-      <ArticlesNext />
-    </div>
+    <ArticlesNext />
   </div>
 </template>
 ß
