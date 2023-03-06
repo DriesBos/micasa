@@ -67,11 +67,11 @@ export default {
       document.addEventListener('mousemove', moveCursor);
     },
     changeCursor() {
-      console.log('ADD');
+      // console.log('ADD');
       document.querySelector('.cursor').classList.add('active');
     },
     removeChangeCursor() {
-      console.log('REMOVE');
+      // console.log('REMOVE');
       document.querySelector('.cursor').classList.remove('active');
     },
     invertCursor() {
