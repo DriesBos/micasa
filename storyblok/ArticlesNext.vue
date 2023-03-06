@@ -35,7 +35,7 @@
   display: flex
   justify-content: space-between
   height: 8rem
-  background: #EFEEEC
+  background: $bg-white
   &-Item
     display: flex
     align-items: center

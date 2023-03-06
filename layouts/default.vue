@@ -1,5 +1,6 @@
 <template>
   <main>
+    <TheLanding :activeState="landingState" />
     <div class="cursor" />
     <TheHeader />
     <slot />
@@ -15,6 +16,9 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default {
+  data() {
+    return { landingState: true };
+  },
   watch: {
     $route() {
       this.removeChangeCursor();
