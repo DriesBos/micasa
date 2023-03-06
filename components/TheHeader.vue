@@ -112,15 +112,20 @@ function modalMouseEnter() {
   &-Logo
     padding: 1rem var(--spacing-sides)
     padding-bottom: 0
+    border: 1px solid green
     h1
       font-size: 4rem
       line-height: 4rem
   &-Nav
     ul
       display: flex
+      align-items: center
       li
         padding: 1rem var(--spacing-sides)
         display: flex
+        align-items: center
+        a
+          border-bottom: $border-transparent
         a:hover
           border-bottom: $border
         a, span, div

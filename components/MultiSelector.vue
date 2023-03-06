@@ -20,6 +20,7 @@
     text-transform: lowercase
     line-height: 2rem
     font-weight: bold
+    border-bottom: $border-transparent
     &.active
       border-bottom: $border
       // Resets
