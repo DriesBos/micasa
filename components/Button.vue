@@ -8,7 +8,7 @@
 const props = defineProps({ active: Boolean });
 </script>
 
-<style lang="sass" scoped>
+<!-- <style lang="sass" scoped>
 .btn
   display: flex
   border: 2px solid $color
@@ -24,4 +24,4 @@ const props = defineProps({ active: Boolean });
     background: black
     color: $bg-yellow
     border: 2px solid transparent
-</style>
+</style> -->

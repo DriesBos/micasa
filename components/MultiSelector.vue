@@ -8,8 +8,23 @@
 .multiSelector
   display: flex
   flex-wrap: nowrap
-  border: 2px solid $color
-  border-radius: 1000px
   & > .btn
+    // Resets
     border: 0
+    border-radius: 0
+    margin: 1rem var(--spacing-sides)
+    margin-right: 1rem
+    font-family: "Futura PT", Helvetica, Arial, sans-serif
+    font-size: 2rem
+    font-weight: bold
+    text-transform: lowercase
+    line-height: 2rem
+    font-weight: bold
+    &.active
+      border-bottom: $border
+      // Resets
+      background: transparent !important
+      color: $color !important
+    &:last-child
+      margin-right: var(--spacing-sides)
 </style>

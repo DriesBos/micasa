@@ -6,15 +6,15 @@
         @mouseenter="hoverState = true"
         @mouseleave="hoverState = false"
       >
-        <Button @click="toggleViewState" :active="viewState">text</Button>
-        <Button @click="toggleViewState" :active="!viewState">image</Button>
+        <Button @click="toggleViewState" :active="viewState">txt</Button>
+        <Button @click="toggleViewState" :active="!viewState">img</Button>
       </MultiSelector>
-      <MultiSelector class="articlesList-MultiSelector">
+      <!-- <MultiSelector class="articlesList-MultiSelector">
         <Button @click="toggleViewState" :active="viewState">All</Button>
         <Button @click="toggleViewState" :active="!viewState">Urban</Button>
         <Button @click="toggleViewState" :active="!viewState">Rural</Button>
         <Button @click="toggleViewState" :active="!viewState">Nature</Button>
-      </MultiSelector>
+      </MultiSelector> -->
     </div>
     <div class="articlesList-Container">
       <div
@@ -75,13 +75,8 @@ function toggleViewState() {
   &-Filters
     display: flex
     justify-content: flex-end
-    padding: 0 var(--spacing-sides)
     margin-top: 10vh
     margin-bottom: var(--spacing-base)
-    & > div
-      margin-right: 2rem
-      &:last-child
-        margin-right: 0
   &-Container
     position: relative
     flex-grow: 1

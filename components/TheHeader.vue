@@ -126,7 +126,7 @@ function modalMouseEnter() {
         a, span, div
           font-size: 2rem
           font-weight: bold
-          text-transform: capitalize
+          text-transform: lowercase
           line-height: 2rem
           font-weight: bold
         & .router-link-active
