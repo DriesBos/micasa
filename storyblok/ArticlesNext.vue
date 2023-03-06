@@ -52,11 +52,14 @@
     &:first-child
       transform: translateX(-12rem)
       span
+        margin-right: 1rem
         transform: rotate(180deg)
       &:hover
         transform: translateX(0)
     &:last-child
       transform: translateX(12rem)
+      span
+        margin-left: 1rem
       &:hover
         transform: translateX(0)
 
