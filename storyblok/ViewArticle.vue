@@ -14,16 +14,14 @@
         :blok="blok"
       />
     </div>
-    <!-- <div class="article-Carousel">
-      <ArticlesCarousel />
-    </div> -->
+    <div class="article-Carousel">
+      <ArticlesNext />
+    </div>
   </div>
 </template>
 ß
 
 <script setup>
-import { ref, onMounted } from 'vue';
-
 const props = defineProps({ blok: Object });
 
 const styleObject = reactive({
