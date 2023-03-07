@@ -58,7 +58,7 @@ watch(
     transform: scale(0.96)
     height: calc(100vh - 3rem)
     border-radius: 2rem 2rem 0 0
-    padding: 0 var(--spacing-sides)
+    padding: 0 4rem
     display: flex
     flex-direction: column
     justify-content: flex-start

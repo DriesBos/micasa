@@ -24,7 +24,7 @@ const show = ref(false);
 .expandable
   display: flex
   flex-direction: column
-  padding: 0 4rem
+  // padding: 0 4rem
   &-Top
     display: flex
     flex-wrap: nowrap
