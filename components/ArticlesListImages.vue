@@ -30,8 +30,9 @@ defineProps({ article: Object, slug: String });
       display: flex
       justify-content: center
       align-items: center
-      height: 16vh
-      width: 24vh
+      height: calc(100% - 3rem)
+      width: auto
+      aspect-ratio: 3 / 2
       overflow: hidden
       object-fit: contain
       img
