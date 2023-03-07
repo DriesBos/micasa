@@ -78,6 +78,4 @@ const { data } = await storyblokApi.get('cdn/stories/config', {
 });
 
 let isActive = ref(props.activeState);
-
-console.log('LANDING', data.story.content.landing_image);
 </script>
