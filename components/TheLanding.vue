@@ -5,8 +5,8 @@
       :class="{ active: isActive }"
       @click="isActive = false"
     >
-      <div class="landing-Content displayFont">
-        <h1>MiCasa</h1>
+      <div class="landing-Content">
+        <h1 class="displayFont">MiCasa</h1>
         <p>{{ data.story.content.landing_text }}</p>
       </div>
       <div class="landing-Image">
@@ -29,7 +29,7 @@
   justify-content: center
   transform: translateX(-100%) scale(0.96)
   transition: transform .33s ease-in-out, border-radius .33s ease-in-out
-  background: $bg-white
+  background: $bg-yellow
   border-radius: 0 2rem 2rem 0
   overflow: hidden
   z-index: +1
@@ -39,20 +39,28 @@
   &-Content
     text-align: center
     z-index: +1
-    max-width: 50rem
+    max-width: 55rem
     h1
       color: $color-light
-      font-size: 20vmin
+      font-size: 33vmin
+      line-height: 33vmin
+      letter-spacing: -0.033em
+      white-space: nowrap
     p
       color: $color-light
       font-size: 3rem
       line-height: 1.2
+      font-weight: bold
+      word-wrap: normal
+      word-break: normal
+      overflow-wrap: normal
+      hyphens: none
   &-Image
     position: absolute
-    left: 0
-    top: 0
-    right: 0
-    bottom: 0
+    left: 2rem
+    top: 2rem
+    right: 2rem
+    bottom: 2rem
     background: black
     img
       width: 100%
