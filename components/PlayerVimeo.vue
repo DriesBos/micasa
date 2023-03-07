@@ -17,5 +17,5 @@
 </template>
 
 <script setup>
-const props = defineProps({ videoid: String, autoplay: String });
+defineProps({ videoid: String, autoplay: String });
 </script>

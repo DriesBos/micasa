@@ -96,23 +96,17 @@ function getSlugs() {
   array.forEach((element, index) => {
     if ('/' + element.full_slug == router.currentRoute.value.path) {
       if (articles.value[index - 1] !== undefined) {
-        console.log('HAS PREV', articles.value[index - 1]);
         articlesPrev.value = articles.value[index - 1];
       } else {
-        console.log('NO PREV');
         articlesPrev.value = undefined;
       }
       if (articles.value[index + 1] !== undefined) {
-        console.log('HAS NEXT', articles.value[index + 1]);
         articlesNext.value = articles.value[index + 1];
       } else {
-        console.log('NO NEXT');
         articlesNext.value = undefined;
       }
     }
   });
-  console.log('PREV', typeof articlesPrev.value);
-  console.log('NEXT', typeof articlesNext.value);
 }
 
 onMounted(() => {
