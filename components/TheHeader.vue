@@ -37,7 +37,7 @@
     <Teleport to="main">
       <div class="modal" :class="modal" @click="modal = 'hidden'">
         <div class="modal-Box">
-          <div class="icon cursorInteract">
+          <div class="modal-Box_Icon icon cursorInteract">
             <nuxt-icon
               @click="modal = 'hidden'"
               class="icon-Span"
@@ -163,7 +163,7 @@ function modalMouseEnter() {
     transform: scale(0.96)
     height: calc(100vh - 3rem)
     border-radius: 2rem 2rem 0 0
-    padding: var(--spacing-sections) var(--spacing-sides)
+    padding: 0 var(--spacing-sides)
     display: flex
     flex-direction: column
     justify-content: flex-start
@@ -173,10 +173,16 @@ function modalMouseEnter() {
     transition: top .165s ease-in-out, width .33s ease-in-out, transform .33s ease-in-out
     &::-webkit-scrollbar
       display: none
-    .icon
+    &_Icon
       position: absolute
       top: 2rem
       right: 2rem
+    &_Content
+      padding: var(--spacing-sections) 0
+      height: 100%
+      overflow-y: auto
+      &::-webkit-scrollbar
+        display: none
   &.hidden
     background: hsl(100, 100%, 0%, 0)
     .modal-Box
