@@ -34,7 +34,7 @@
       </nav>
     </div>
 
-    <Teleport to="body">
+    <Teleport to="main">
       <div class="modal" :class="modal" @click="modal = 'hidden'">
         <div class="modal-Box">
           <div class="icon cursorInteract">
