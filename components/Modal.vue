@@ -1,20 +1,26 @@
 <template>
   <div class="modal" :class="modal">
-    <div class="modal-Box" @click="$emit('closeModal')">
-      <div class="modal-Box_Icon icon cursorInteract">
+    <div class="modal-Box">
+      <div
+        class="modal-Box_Icon icon cursorInteract"
+        @click="$emit('closeModal')"
+      >
         <nuxt-icon class="icon-Span" name="close" />
       </div>
+
       <div v-if="content" class="modal-Box_Content">
-        <div v-for="el in content" :key="el._uid">
-          <Markdown :content="el.content" />
-        </div>
+        <StoryblokComponent
+          v-for="blok in content"
+          :key="blok._uid"
+          :blok="blok"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue';
+import { ref } from 'vue';
 
 const props = defineProps({ modalState: String, data: Object });
 
