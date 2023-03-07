@@ -2,13 +2,15 @@
   <div @click="show = !show" class="expandable" :class="{ active: show }">
     <div class="expandable-Top cursorInteract">
       <div class="expandable-Top_Icon">
-        <nuxt-icon class="icon" name="close" />
+        <nuxt-icon class="icon" name="plus" />
       </div>
       <h2>{{ blok.title }}</h2>
     </div>
-    <div v-if="show" class="expandable-Bottom">
-      <markdown :content="blok.text" />
-    </div>
+    <Transition>
+      <div v-if="show" class="expandable-Bottom">
+        <markdown :content="blok.text" />
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -22,6 +24,7 @@ const show = ref(false);
 .expandable
   display: flex
   flex-direction: column
+  padding: 0 4rem
   &-Top
     display: flex
     flex-wrap: nowrap
@@ -30,15 +33,23 @@ const show = ref(false);
     &_Icon
       width: 2rem
       height: 2rem
+      transition: transform .33s ease
     h2
       font-size: 4rem
   &-Bottom
-    // max-height: 0
-    padding: 0 var(--spacing-sides)
     overflow: hidden
     .markdown
       max-width: 60em
   &.active
-    // .expandable-Bottom
-    //   max-height: 100%
+    .expandable-Top_Icon
+      transform: rotate(135deg)
+
+
+// Expand Animation
+.v-enter-active, .v-leave-active
+  transition: opacity 0.33s ease
+
+
+.v-enter-from, .v-leave-to
+  opacity: 0
 </style>

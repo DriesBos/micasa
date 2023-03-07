@@ -9,8 +9,8 @@
     </div>
 
     <div>
-      <a class="cursorInteract" href="https://www.instagram.com">Twitter</a>
       <a class="cursorInteract" href="https://www.instagram.com">Instagram</a>
+      <a class="cursorInteract" href="https://www.instagram.com">Pinterest</a>
       <a class="cursorInteract" href="https://www.instagram.com"
         >info@micasa.com</a
       >
