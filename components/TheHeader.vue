@@ -35,11 +35,7 @@
     </div>
 
     <Teleport to="main">
-      <Modal
-        :modalState="modal"
-        :data="infoContent"
-        @closeModal="modal = 'hidden'"
-      />
+      <Modal :modalState="modal" @closeModal="modal = 'hidden'" />
     </Teleport>
   </header>
 </template>
@@ -57,9 +53,6 @@ const { data } = await storyblokApi.get('cdn/stories/config', {
 
 const headerMenu = ref(null);
 headerMenu.value = data.story.content.header_menu;
-
-const infoContent = ref(null);
-infoContent.value = data.story.content.info_content;
 
 const modal = ref(null);
 modal.value = 'hidden';

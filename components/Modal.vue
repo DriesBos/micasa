@@ -14,6 +14,9 @@
           :key="blok._uid"
           :blok="blok"
         />
+        <div class="accordionWrapper">
+          <AccordionWrapper :content="infoArray" />
+        </div>
       </div>
     </div>
   </div>
@@ -22,12 +25,23 @@
 <script setup>
 import { ref } from 'vue';
 
-const props = defineProps({ modalState: String, data: Object });
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get('cdn/stories/config', {
+  version: 'draft',
+  resolve_links: 'url',
+});
 
-const modal = ref(props.modalState);
+const props = defineProps({
+  modalState: String,
+});
 
 const content = ref(null);
-content.value = props.data;
+content.value = data.story.content.info_content;
+
+const infoArray = ref(null);
+infoArray.value = data.story.content.info_expandables;
+
+const modal = ref(props.modalState);
 
 watch(
   () => props.modalState,
@@ -37,7 +51,7 @@ watch(
 );
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .modal
   position: absolute
   top: 0
@@ -73,9 +87,12 @@ watch(
       top: 2rem
       right: 2rem
     &_Content
+      display: flex
+      flex-direction: column
       padding: var(--spacing-sections) 0
       height: 100%
       overflow-y: auto
+      row-gap: 2rem
       &::-webkit-scrollbar
         display: none
   &.hidden
@@ -94,4 +111,10 @@ watch(
       width: 100%
       transform: scale(1)
       transition: top .33s ease-in-out, width .165s ease-in-out .165s, transform .33s ease-in-out
+
+.accordionWrapper
+  display: flex
+  flex-direction: column
+  row-gap: 1rem
+  padding-bottom: var(--spacing-sections)
 </style>
