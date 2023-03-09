@@ -49,7 +49,7 @@ currentState.value = props.activeState;
   display: flex
   align-items: center
   justify-content: center
-  transition: transform .33s ease-in-out, background .33s ease-in-out
+  transition: transform .33s ease-in-out, background .165s ease-in-out
   overflow: hidden
   z-index: +1
   pointer-event: none
@@ -58,7 +58,7 @@ currentState.value = props.activeState;
     z-index: +1
     max-width: 55rem
     pointer-event: auto
-    transition: transform .33s ease-in-out, background .33s ease-in-out, opacity .165s ease-in-out
+    transition: transform .33s ease-in-out, opacity .165s ease-in-out
     opacity: 1
     h1
       color: $color-light
@@ -83,7 +83,7 @@ currentState.value = props.activeState;
     bottom: 0
     padding: 2rem
     background: $bg-yellow
-    transition: transform .33s ease-in-out
+    transition: transform .165s ease-in-out
     &_Wrapper
       background: $color
       width: 100%

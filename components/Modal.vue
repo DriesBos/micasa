@@ -79,7 +79,7 @@ watch(
     align-items: center
     pointer-events: auto
     overflow: auto
-    transition: top .165s ease-in-out, width .33s ease-in-out, transform .33s ease-in-out
+    transition: top .165s ease-in-out, transform .33s ease-in-out
     &::-webkit-scrollbar
       display: none
     &_Icon
