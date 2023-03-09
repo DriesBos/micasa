@@ -27,24 +27,31 @@ const styleObject = reactive({
 });
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .article
   &-Landing
     height: calc(100vh - 5rem)
     display: flex
     flex-direction: column
     justify-content: flex-end
+    padding-bottom: 2rem
     &_Title
       font-size: 10vw
       padding: 0 var(--spacing-sides)
-      margin-bottom: 1rem
       h1
         line-height: 0.5
   &-Content
     margin-bottom: var(--spacing-sections)
     z-index: -1
     & > div
-      margin-bottom: var(--spacing-base)
+      margin-bottom: 2rem
+
       &:last-child
         margin-bottom: 0
+    & > .articleRow:first-child
+      max-height: calc(100vh - 4rem)
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
 </style>
