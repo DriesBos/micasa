@@ -52,12 +52,12 @@ currentState.value = props.activeState;
   transition: transform .33s ease-in-out, background .165s ease-in-out
   overflow: hidden
   z-index: +1
-  pointer-event: none
+  pointer-events: none
   &-Content
     text-align: center
     z-index: +1
     max-width: 55rem
-    pointer-event: auto
+    pointer-events: auto
     transition: transform .33s ease-in-out, opacity .165s ease-in-out
     opacity: 1
     h1
