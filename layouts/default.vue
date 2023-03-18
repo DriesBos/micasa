@@ -98,6 +98,7 @@ export default {
   pointer-events: none
   background: $color
   transition: width .165s ease, height .165s ease, background .165s ease
+  opacity: 0
   &.invert
     background: $color-light
   &.active

@@ -69,9 +69,9 @@ watch(
     position: fixed
     background: $bg-white
     width: 100%
-    transform: scale(0.96)
+    // transform: scale(0.96)
     height: calc(100vh - 3rem)
-    border-radius: 2rem 2rem 0 0
+    // border-radius: 2rem 2rem 0 0
     padding: 0 4rem
     display: flex
     flex-direction: column
@@ -109,7 +109,7 @@ watch(
     .modal-Box
       top: 3rem
       width: 100%
-      transform: scale(1)
+      // transform: scale(1)
       transition: top .33s ease-in-out, width .165s ease-in-out .165s, transform .33s ease-in-out
 
 .accordionWrapper
