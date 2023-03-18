@@ -33,13 +33,14 @@
   display: flex
   flex-wrap: nowrap
   background: $bg-black
+  column-gap: var(--spacing-gap)
   color: $color-light
   padding: var(--spacing-sections) var(--spacing-sides) 2rem var(--spacing-sides)
   & > div
     display: flex
     flex-direction: column
     justify-content: flex-end
-    flex-basis: 33.3333%
+    flex: 1
     a, p
       color: $color-light
       font-size: 2rem
@@ -60,8 +61,10 @@
     input
       background: transparent
       flex-grow: 1
+      flex-shrink: 1
       padding: 0 1rem
       height: 100%
+      width: 100px
   &-Icon
     position: relative
     display: flex
