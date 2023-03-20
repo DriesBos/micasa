@@ -16,6 +16,7 @@
         class="articlesList-TextContainer"
       >
         <ArticlesListText
+          class="fontLarge"
           v-for="(article, index) in articles"
           :key="article.uuid"
           :article="article.content"

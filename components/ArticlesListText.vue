@@ -32,13 +32,19 @@ defineProps({ article: Object, slug: String, number: Number });
     pointer-events: none
   &-TextItem
     position: relative
+    &.fontMedium
+      border-bottom: $border
+      a
+        font-size: 2rem
+    &.fontLarge, &.fontLarge a
+      font-size: 3.5rem
     &:hover > .articlesList-Stripe
       opacity: 1
     & a
       display: flex
       flex-wrap: nowrap
       width: 100%
-      font-size: 3.2vw
+      // font-size: 3.5rem
       font-weight: bold
       & > div
         font-weight: bold

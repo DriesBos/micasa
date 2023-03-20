@@ -3,7 +3,12 @@
     <div class="imageBlok">
       <img :src="blok.image.filename" :alt="blok.image.alt" />
     </div>
-    <ArticlesListText :article="blok" :number="blok.number - 1" />
+    <ArticlesListText
+      class="fontMedium"
+      :article="blok"
+      :number="blok.number - 1"
+      font=""
+    />
   </div>
 </template>
 
@@ -11,12 +16,13 @@
 const props = defineProps({ blok: Object });
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass">
 .articleHero
-  padding: var(--spacing-sides)
+  margin: 0 var(--spacing-sides)
   .imageBlok
     position: relative
     height: calc(100vh - (3.2vw * 1.5))
+    margin-bottom: .5rem
     img
       position: absolute
       left: 0
