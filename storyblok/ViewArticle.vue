@@ -44,14 +44,13 @@ const styleObject = reactive({
     margin-bottom: var(--spacing-sections)
     z-index: -1
     & > div
-      margin-bottom: 2rem
-
+      margin-bottom: 4rem
       &:last-child
         margin-bottom: 0
-    & > .articleRow:first-child
-      max-height: calc(100vh - 4rem)
-      img
-        width: 100%
-        height: 100%
-        object-fit: cover
+    // & > .articleRow:first-child
+    //   max-height: calc(100vh - 4rem)
+    //   img
+    //     width: 100%
+    //     height: 100%
+    //     object-fit: cover
 </style>
