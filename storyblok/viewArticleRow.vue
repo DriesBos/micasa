@@ -11,8 +11,6 @@
 <script setup>
 const props = defineProps({ blok: Object });
 
-// console.log(props.blok.columns);
-
 const columns = ref(null);
 props.blok.columns
   ? (columns.value = props.blok.columns)
