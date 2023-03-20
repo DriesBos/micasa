@@ -12,8 +12,10 @@
     // Resets
     border: 0
     border-radius: 0
-    margin: 1rem var(--spacing-sides)
-    margin-right: .5rem
+    padding-top: 1rem
+    margin-bottom: 1rem
+    margin-left: var(--spacing-sides)
+    margin-right: var(--spacing-sides)
     font-family: "Futura PT", Helvetica, Arial, sans-serif
     font-size: 2rem
     font-weight: bold
@@ -26,6 +28,8 @@
       // Resets
       background: transparent !important
       color: $color !important
+    &:first-child
+      margin-right: calc(#{var(--spacing-sides)} / 2)
     &:last-child
-      margin-right: var(--spacing-sides)
+      margin-left: calc(#{var(--spacing-sides)} / 2)
 </style>
