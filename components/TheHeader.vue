@@ -1,10 +1,11 @@
 <template>
   <header class="header">
     <div class="header-Logo displayFont cursorInteract">
-      <NuxtLink to="/">
+      <NuxtLink to="/" class="header-Logo_Item">
         <h1>MiCasa</h1>
       </NuxtLink>
     </div>
+
     <div class="header-Nav">
       <nav>
         <ul>
@@ -92,20 +93,25 @@ function modalMouseEnter() {
   display: flex
   justify-content: space-between
   align-items: center
+  column-gap: var(--spacing-gap)
   &-Logo
-    padding: 1rem var(--spacing-sides)
-    padding-bottom: 0
+    flex: 1
+    padding: 0 var(--spacing-sides)
+    padding-top: 1rem
     h1
       font-size: 4rem
       line-height: 4rem
   &-Nav
+    flex: 1
     ul
       display: flex
-      align-items: center
+      justify-content: space-between
+      align-items: stretch
       li
-        padding: 1rem var(--spacing-sides)
         display: flex
-        align-items: center
+        align-items: stretch
+        padding: 0 var(--spacing-sides)
+        height: 100%
         a
           border-bottom: $border-transparent
         a:hover
@@ -121,7 +127,7 @@ function modalMouseEnter() {
         & .router-link-active
           border-bottom: $border
         &:last-child
-          padding-right: var(--spacing-sides)
+          // padding-right: var(--spacing-sides)
     &_Icon
       padding-left: 1rem
       padding-right: 1rem
