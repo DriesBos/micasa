@@ -2,15 +2,19 @@
   <div v-editable="article" class="articlesList-TextItem cursorInteract">
     <div class="articlesList-Stripe" />
     <NuxtLink :to="slug">
-      <div>AP—00{{ number + 1 }}</div>
-      <div>{{ article.title }}</div>
       <div>
-        {{ article.location }}
+        <div class="number">AP—00{{ number + 1 }}</div>
+        <div class="title">{{ article.title }}</div>
       </div>
-      <!-- <div>
-        {{ article.location_type }}
-      </div> -->
-      <div>{{ article.date }}</div>
+      <div>
+        <div class="location">
+          {{ article.location }}
+        </div>
+        <!-- <div>
+          {{ article.location_type }}
+        </div> -->
+        <div class="date">{{ article.date }}</div>
+      </div>
     </NuxtLink>
   </div>
 </template>
@@ -32,30 +36,31 @@ defineProps({ article: Object, slug: String, number: Number });
     pointer-events: none
   &-TextItem
     position: relative
-    &.fontMedium
-      border-bottom: $border
-      a
-        font-size: 2rem
-    &.fontLarge, &.fontLarge a
-      font-size: 3.5rem
+    &.fontMedium a
+      font-size: 2rem
+    &.fontLarge a
+      font-size: 3rem
     &:hover > .articlesList-Stripe
       opacity: 1
     & a
       display: flex
+      column-gap: var(--spacing-gap)
       flex-wrap: nowrap
       width: 100%
-      // font-size: 3.5rem
       font-weight: bold
       & > div
-        font-weight: bold
-        &:first-child
-          text-align: left
-          width: calc(13vw + 2rem)
-        &:nth-child(2) // Name
-          width: calc(25vw + 4rem)
-        &:nth-child(3) // Location
-          flex-grow: 1
-        &:last-child
-          text-align: right
-          width: 8vw
+        flex: 1
+        display: flex
+        column-gap: var(--spacing-gap)
+        & > div
+          // border: 1px solid blue
+          &.number
+            width: 11vw
+          &.title
+            flex-grow: 1
+          &.location
+            flex-grow: 1
+          &.date
+            width: 6.77vw
+            text-align: right
 </style>
