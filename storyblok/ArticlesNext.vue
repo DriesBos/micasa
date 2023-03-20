@@ -36,6 +36,8 @@
   justify-content: space-between
   height: 8rem
   background: $bg-white
+  width: 100vw
+  overflow: hidden
   &-Item
     display: flex
     align-items: center
