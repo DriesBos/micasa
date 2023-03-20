@@ -9,12 +9,6 @@
         <Button @click="toggleViewState" :active="viewState">txt</Button>
         <Button @click="toggleViewState" :active="!viewState">img</Button>
       </MultiSelector>
-      <!-- <MultiSelector class="articlesList-MultiSelector">
-        <Button @click="toggleViewState" :active="viewState">All</Button>
-        <Button @click="toggleViewState" :active="!viewState">Urban</Button>
-        <Button @click="toggleViewState" :active="!viewState">Rural</Button>
-        <Button @click="toggleViewState" :active="!viewState">Nature</Button>
-      </MultiSelector> -->
     </div>
     <div class="articlesList-Container">
       <div
@@ -111,10 +105,11 @@ function toggleViewState() {
   &-Container
     position: relative
     transition: all .33s ease-in-out
+    & > div
+      transition: all .33s ease-in-out
     & > div.hover
       opacity: .35
       filter: blur(.125rem)
-      transition: all .33s ease-in-out
     & > div.active
       opacity: 1 !important
       z-index: 0 !important
