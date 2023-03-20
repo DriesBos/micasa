@@ -24,7 +24,7 @@
             </template>
           </li>
           <li
-            class="cursorInteract"
+            class="header-Nav_Info cursorInteract"
             @mouseenter="modalMouseEnter"
             @mouseleave="modal == 'full' ? modal == 'full' : (modal = 'hidden')"
             @click="modal = 'full'"
@@ -96,13 +96,17 @@ function modalMouseEnter() {
   column-gap: var(--spacing-gap)
   &-Logo
     flex: 1
-    padding: 0 var(--spacing-sides)
-    padding-top: 1rem
+    // border: 1px solid blue
     h1
+      padding: 0 var(--spacing-sides)
+      padding-top: 1rem
       font-size: 4rem
       line-height: 4rem
   &-Nav
     flex: 1
+    // border: 1px solid blue
+    &_Info
+      margin-right: var(--spacing-sides)
     ul
       display: flex
       justify-content: space-between
@@ -110,7 +114,6 @@ function modalMouseEnter() {
       li
         display: flex
         align-items: stretch
-        padding: 0 var(--spacing-sides)
         height: 100%
         a
           border-bottom: $border-transparent
@@ -126,8 +129,6 @@ function modalMouseEnter() {
           text-transform: capitalize
         & .router-link-active
           border-bottom: $border
-        &:last-child
-          // padding-right: var(--spacing-sides)
     &_Icon
       padding-left: 1rem
       padding-right: 1rem
