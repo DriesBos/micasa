@@ -11,7 +11,7 @@
 <script setup>
 const props = defineProps({ blok: Object });
 
-console.log(props.blok.columns);
+// console.log(props.blok.columns);
 
 const columns = ref(null);
 props.blok.columns

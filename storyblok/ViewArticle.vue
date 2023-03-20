@@ -25,6 +25,8 @@ const props = defineProps({ blok: Object });
 const styleObject = reactive({
   fontSize: props.blok.title_size + 'vw',
 });
+
+console.log('ARTICLE SINGLE', props.blok.date);
 </script>
 
 <style lang="sass">
