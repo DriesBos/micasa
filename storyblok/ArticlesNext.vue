@@ -52,16 +52,16 @@
         margin-left: 1rem
         margin-right: 1rem
     &:first-child
+      justify-content: flex-start
       transform: translateX(-12rem)
       span
-        margin-right: 1rem
         transform: rotate(180deg)
       &:hover
         transform: translateX(0)
     &:last-child
+      justify-content: flex-end
       transform: translateX(12rem)
       span
-        margin-left: 1rem
       &:hover
         transform: translateX(0)
 
