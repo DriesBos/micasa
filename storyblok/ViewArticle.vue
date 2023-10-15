@@ -42,7 +42,6 @@ const styleObject = reactive({
         line-height: 0.5
   &-Content
     margin-bottom: var(--spacing-sections)
-    z-index: -1
     & > div
       margin-bottom: 4rem
       &:last-child
