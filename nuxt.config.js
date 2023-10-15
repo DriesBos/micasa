@@ -12,6 +12,15 @@ export default defineNuxtConfig({
     },
   },
 
+  ssr: false,
+  nitro: {
+    baseURL: 'https://localhost:3000',
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
+
   vite: {
     css: {
       preprocessorOptions: {
