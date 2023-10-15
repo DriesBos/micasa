@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default {
   data() {
-    return { landingState: 'hidden' };
+    return { landingState: 'full' };
   },
   watch: {
     $route() {
