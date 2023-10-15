@@ -3,7 +3,7 @@
     <div>
       <div class="footer-Logo displayFont cursorInteract">
         <NuxtLink to="/">
-          <h1>MiCasa</h1>
+          <h1>Minka Haus</h1>
         </NuxtLink>
       </div>
     </div>
@@ -12,7 +12,7 @@
       <a class="cursorInteract" href="https://www.instagram.com">Instagram</a>
       <a class="cursorInteract" href="https://www.instagram.com">Pinterest</a>
       <a class="cursorInteract" href="https://www.instagram.com"
-        >info@micasa.com</a
+        >info@minkahaus.com</a
       >
     </div>
 
