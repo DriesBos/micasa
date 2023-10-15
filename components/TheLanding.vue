@@ -62,8 +62,8 @@ currentState.value = props.activeState;
     opacity: 1
     h1
       color: $color-light
-      font-size: 33vmin
-      line-height: 33vmin
+      font-size: 19.5vmin
+      line-height: 19.5vmin
       letter-spacing: -0.033em
       white-space: nowrap
     p
