@@ -9,7 +9,7 @@
 const props = defineProps({ blok: Object });
 
 onMounted(() => {
-  console.log('mounted', props.blok);
+  // console.log('mounted', props.blok);
 });
 </script>
 
