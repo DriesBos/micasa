@@ -36,7 +36,7 @@
     </div>
 
     <Teleport to="main">
-      <Modal :modalState="modal" @closeModal="modal = 'hidden'" />
+      <!-- <Modal :modalState="modal" @closeModal="modal = 'hidden'" /> -->
     </Teleport>
   </header>
 </template>
