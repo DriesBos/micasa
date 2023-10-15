@@ -15,7 +15,7 @@
             : (currentState = 'full')
         "
       >
-        <h1 class="displayFont">MiCasa</h1>
+        <h1 class="displayFont">Minka Haus</h1>
         <p>{{ data.story.content.landing_text }}</p>
       </div>
       <div class="landing-Image">

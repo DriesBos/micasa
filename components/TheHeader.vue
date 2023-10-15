@@ -2,7 +2,7 @@
   <header class="header">
     <div class="header-Logo displayFont cursorInteract">
       <NuxtLink to="/" class="header-Logo_Item">
-        <h1>MiCasa</h1>
+        <h1>Minka Haus</h1>
       </NuxtLink>
     </div>
 
