@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
