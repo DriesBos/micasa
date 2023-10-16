@@ -61,7 +61,6 @@
     &:last-child
       justify-content: flex-end
       transform: translateX(12rem)
-      span
       &:hover
         transform: translateX(0)
 
