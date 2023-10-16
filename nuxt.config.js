@@ -13,6 +13,10 @@ export default defineNuxtConfig({
   },
   ssr: false,
 
+  apiOptions: {
+    region: 'eu',
+  },
+
   // ssr: false,
   // nitro: {
   //   baseURL: 'https://localhost:3000',
