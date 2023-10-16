@@ -35,7 +35,7 @@
       </nav>
     </div>
 
-    <Teleport to="main">
+    <Teleport to="body">
       <Modal :modalState="modal" @closeModal="modal = 'hidden'" />
     </Teleport>
   </header>
