@@ -16,7 +16,7 @@ const story = await useAsyncStoryblok(
 </script>
 
 <template>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+  <StoryblokComponent v-show="story" :blok="story.content" />
 </template>
 
 <!-- For index.vue if needed -->

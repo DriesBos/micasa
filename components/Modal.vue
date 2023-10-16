@@ -8,7 +8,7 @@
         <nuxt-icon class="icon-Span" name="close" />
       </div>
 
-      <div v-if="content" class="modal-Box_Content">
+      <div v-show="content" class="modal-Box_Content">
         <StoryblokComponent
           v-for="blok in content"
           :key="blok._uid"
