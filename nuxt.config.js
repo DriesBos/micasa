@@ -11,6 +11,7 @@ export default defineNuxtConfig({
       meta: [{ name: 'description', content: 'content' }],
     },
   },
+  ssr: true,
 
   // ssr: false,
   // nitro: {
