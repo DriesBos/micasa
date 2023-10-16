@@ -10,7 +10,7 @@
       <nav>
         <ul>
           <li class="cursorInteract">
-            <NuxtLink to="/">locations</NuxtLink>
+            <!-- <NuxtLink to="/">locations</NuxtLink>
             <template v-if="route.params.slug[1]">
               <div class="header-Nav_Icon">
                 <nuxt-icon class="icon-Arrow_right" name="arrow-right" />
@@ -21,7 +21,7 @@
                   {{ pageTitle }}
                 </span>
               </NuxtLink>
-            </template>
+            </template> -->
           </li>
           <li
             class="header-Nav_Info cursorInteract"
@@ -35,9 +35,9 @@
       </nav>
     </div>
 
-    <Teleport to="main">
+    <!-- <Teleport to="main">
       <Modal :modalState="modal" @closeModal="modal = 'hidden'" />
-    </Teleport>
+    </Teleport> -->
   </header>
 </template>
 

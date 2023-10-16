@@ -2,7 +2,6 @@
   <main>
     <TheLanding :activeState="landingState" />
     <div class="cursor" />
-    <p>TESTING</p>
     <TheHeader />
     <slot />
     <TheFooter />
