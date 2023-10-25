@@ -1,5 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  nitro: {
+    prerender: {
+      failOnError: false,
+    },
+  },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
