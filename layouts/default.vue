@@ -21,42 +21,42 @@ export default {
   },
   watch: {
     $route() {
-      this.removeChangeCursor();
+      // this.removeChangeCursor();
     },
   },
   mounted() {
-    this.customCursor();
-    document
-      .querySelectorAll('.cursorInteract')
-      .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
-    document
-      .querySelectorAll('.cursorInteract')
-      .forEach((item) =>
-        item.addEventListener('mouseleave', this.removeChangeCursor)
-      );
-    document
-      .querySelectorAll('.cursorInvert')
-      .forEach((item) => item.addEventListener('mouseover', this.invertCursor));
-    document
-      .querySelectorAll('.cursorInvert')
-      .forEach((item) =>
-        item.addEventListener('mouseleave', this.removeInvertCursor)
-      );
+    // this.customCursor();
+    // document
+    //   .querySelectorAll('.cursorInteract')
+    //   .forEach((item) => item.addEventListener('mouseover', this.changeCursor));
+    // document
+    //   .querySelectorAll('.cursorInteract')
+    //   .forEach((item) =>
+    //     item.addEventListener('mouseleave', this.removeChangeCursor)
+    //   );
+    // document
+    //   .querySelectorAll('.cursorInvert')
+    //   .forEach((item) => item.addEventListener('mouseover', this.invertCursor));
+    // document
+    //   .querySelectorAll('.cursorInvert')
+    //   .forEach((item) =>
+    //     item.addEventListener('mouseleave', this.removeInvertCursor)
+    //   );
   },
   updated() {
-    this.removeChangeCursor();
+    // this.removeChangeCursor();
   },
   destroyed() {
-    document
-      .querySelectorAll('.cursorInteract')
-      .forEach((item) =>
-        item.removeEventListener('mouseover', this.changeCursor)
-      );
-    document
-      .querySelectorAll('.cursorInteract')
-      .forEach((item) =>
-        item.removeEventListener('mouseleave', this.removeChangeCursor)
-      );
+    document;
+    //   .querySelectorAll('.cursorInteract')
+    //   .forEach((item) =>
+    //     item.removeEventListener('mouseover', this.changeCursor)
+    //   );
+    // document
+    //   .querySelectorAll('.cursorInteract')
+    //   .forEach((item) =>
+    //     item.removeEventListener('mouseleave', this.removeChangeCursor)
+    //   );
   },
   methods: {
     customCursor() {
