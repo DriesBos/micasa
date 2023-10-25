@@ -6,7 +6,7 @@
       </NuxtLink>
     </div>
 
-    <div class="header-Nav">
+    <!-- <div class="header-Nav">
       <nav>
         <ul>
           <li class="cursorInteract">
@@ -33,11 +33,11 @@
           </li>
         </ul>
       </nav>
-    </div>
+    </div> -->
 
-    <Teleport to="body">
+    <!-- <Teleport to="body">
       <Modal :modalState="modal" @closeModal="modal = 'hidden'" />
-    </Teleport>
+    </Teleport> -->
   </header>
 </template>
 
