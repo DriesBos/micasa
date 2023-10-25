@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
-  ssr: false,
+  ssr: true,
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
