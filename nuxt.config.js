@@ -5,6 +5,7 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+  ssr: false,
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -16,7 +17,6 @@ export default defineNuxtConfig({
       meta: [{ name: 'description', content: 'content' }],
     },
   },
-  ssr: true,
 
   apiOptions: {
     region: 'eu',
