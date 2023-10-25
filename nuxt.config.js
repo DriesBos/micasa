@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       meta: [{ name: 'description', content: 'content' }],
     },
   },
-  ssr: false,
+  ssr: true,
 
   apiOptions: {
     region: 'eu',
